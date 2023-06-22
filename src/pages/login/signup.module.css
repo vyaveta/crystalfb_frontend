@@ -37,3 +37,111 @@
     font-size: 15px;
     color: var(--color-secondary);
 }
+
+.register_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_line{
+    padding: 7px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.register_col{
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.register_line_header{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    color: var(--color-secondary);
+}
+
+.register_grid{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    height: 35px;
+    width: 100%;
+}
+
+.register_grid select {
+    width: 90px;
+    font-size: 16px;
+    color: var(--color-primary);
+    background: var(--bg-primary);
+    border-radius: 5px;
+}
+
+.register_grid label {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--color-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--color-secondary);
+    padding: 0 10px;
+}
+
+.register_infos{
+    font-size: 11px;
+    margin-top: 10px;
+    color: var(--color-secondary);
+}
+
+.register_infos span {
+    color: var(--blue-color);
+}
+
+.register_button_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+}
+
+.open_signup{
+    background: var(--green-color);
+    width: 70% !important;
+    font-weight: 600 !important;
+    font-size: 17px;
+    margin-top: 1rem;
+} 
+
+/* media queries */
+
+@media screen and (min-width: 539px){
+    .register{
+        width: 400px;
+    }
+    .register_line{
+        flex-direction: row;
+    }
+    .register_grid select,
+    .register_grid label{
+        width: 110px;
+    }
+}
+
+/* @media screen and (max-width: 1000px){
+    .register{
+        overflow: auto;
+        height: fit-content;
+    }
+} */

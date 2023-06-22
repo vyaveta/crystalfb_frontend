@@ -3,21 +3,15 @@ import styles from './loginInput.module.css'
 import { useEffect } from 'react'
 import {useMediaQuery} from 'react-responsive'
 
-const LoginInput = ({ bottom , ...props }) => {
+const LoginInput = ({ bottom , onChange: onChangeFunction, ...props }) => {
 
   const desktopView = useMediaQuery({
     query: "(min-width: 850px)",
   })
 
-  console.log(desktopView,'is the desktop view')
-
   const [field, meta] = useField(props)
 
-  console.log(field)
-
-  useEffect(() => {
-    console.log(props,'is the props')
-  }, [field, field.name])
+  field.onChange = onChangeFunction
 
   return (
     <div className={`${styles.input_wrap}`}>

@@ -1,23 +1,21 @@
 import { ErrorMessage, useField } from 'formik'
 import styles from './registerInput.module.css'
-import { useEffect } from 'react'
 import {useMediaQuery} from 'react-responsive'
 
-const RegisterInput = ({ bottom , ...props }) => {
+const RegisterInput = ({ bottom, onChange : onChangeFunction, ...props }) => {
 
   const desktopView = useMediaQuery({
     query: "(min-width: 850px)",
   })
-
-  console.log(desktopView,'is the desktop view')
+  const view_min_539 = useMediaQuery({
+    query: "(min-width: 539px)",
+  })
+  const view_min_1170 = useMediaQuery({
+    query: "(min-width: 1170px)",
+  })
 
   const [field, meta] = useField(props)
-
-  console.log(field)
-
-  useEffect(() => {
-    console.log(props,'is the props')
-  }, [field, field.name])
+  field.onChange = onChangeFunction
 
   return (
     <div className={`${styles.input_wrap}`}>
@@ -31,7 +29,7 @@ const RegisterInput = ({ bottom , ...props }) => {
       }
       <input
         className={meta.touched && meta.error ? "input_error_border" : ''}
-        type={field.type} name={field.name} {...props}  {...field} />
+        type={field.type} name={field.name} {...props} {...field} />
       {
         meta.touched && meta.error && <i className='error_icon' style={{top: `${!bottom && !desktopView ? '65%' : '15px'}`}} ></i>
       }

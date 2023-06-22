@@ -4,7 +4,7 @@ import styles from "../../pages/login/login.module.css";
 import LoginInput from "../inputs/loginInput";
 import { Link } from "react-router-dom";
 import FormikForm from "../forms/FormikForm";
-import { loginValidation } from "../../utils/componentFunctions/validations";
+import { loginValidation } from "../../utils/componentHelpers/validations";
 
 const loginInfo = {
   email: "",
@@ -16,10 +16,16 @@ const LoginForm = () => {
 
   const { email, password } = login;
 
-  const handleLoginChange = (e) => {
-    const { name, value } = e.target;
-    setLogin({ ...login, [name]: value });
-  };
+  // const handleLoginChange = (e) => {
+  //   // alert('hello')
+  //   const { name, value } = e.target;
+  //   setLogin({ ...login, [name]: value });
+  // };
+
+  const handleLoginChange = useCallback((e) => {
+    const { name, value } = e.target
+    setLogin({...login, [name]:value})
+  },[login])
 
   const LoginBody = (
     <>
@@ -54,6 +60,7 @@ const LoginForm = () => {
       <div className={`${styles.login_2}`}>
         <div className={`${styles.login_2_wrap}`}>
           <FormikForm
+            enableReinitialize
             initialValues={{
               email,
               password,
