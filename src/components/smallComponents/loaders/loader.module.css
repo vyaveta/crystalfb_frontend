@@ -1,0 +1,12 @@
+.wrapper{
+    position: absolute !important;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.385);
+    pointer-events: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

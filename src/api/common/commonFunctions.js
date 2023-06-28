@@ -1,3 +1,5 @@
+import { toast } from "react-hot-toast";
+
 export const handleApiError = (err) => {
     // the response object contain a field named errors if there is any errors
     try {
@@ -16,14 +18,13 @@ export const handleApiError = (err) => {
         message = err.message;
       }
       if (message) {
-        alert(message);
+        showToastMessage('error',message)
         // return message;
       } else {
-        alert("something went wrong");
-        // return "something went wrong";
+        toast.error('something went wrong')
       }
     } catch (e) {
-      alert("something went wrong");
+      toast.error('something went wrong')
     }
   };
   
@@ -33,4 +34,8 @@ export const handleApiError = (err) => {
     });
     return message;
   };
+
+  export const showToastMessage = (type,message) => {
+    toast[type](message)
+  }
   

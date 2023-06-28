@@ -11,8 +11,7 @@ const Input = ({ bottom, onChange : onChangeFunction, value, right, ...props }) 
 
   const [field, meta] = useField(props)
   field.onChange = onChangeFunction
-  console.log(props)
-
+  console.log(field,'is the field')
   // console.log(meta,'is the meta')
 
   return (

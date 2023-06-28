@@ -1,7 +1,7 @@
 import { setCredentials, setIsLoggedIn, setIsloading } from "../../redux/features/auth"
 import { userLoginRoute, userRegisterRoute } from "../../utils/routes/userRoutes"
 import { asyncFunction } from "../common/asyncFunction"
-import { handleApiError } from "../common/commonFunctions"
+import { handleApiError, showToastMessage } from "../common/commonFunctions"
 import { createConfig } from "../common/config"
 import { setHeaders } from "../common/setHeaders"
 
@@ -15,6 +15,7 @@ export const registerFunction = async (data, dispatch, navigate) => {
             data,
         )
         const { message, ...rest} = await asyncFunction(config)
+        showToastMessage('success',message)
         dispatch(setCredentials(rest))
         dispatch(setIsLoggedIn(true))
         navigate('/')
@@ -35,6 +36,7 @@ export const loginFunction = async (data, dispatch, navigate) => {
             data,
         )
         const {message, ...rest} = await asyncFunction(config)
+        showToastMessage('success',message)
         dispatch(setCredentials(rest))
         dispatch(setIsLoggedIn(true))
         navigate('/')

@@ -68,3 +68,7 @@ a {
 .input_error_border{
   border-color: #b94a48 !important;
 }
+
+.no_interactions{
+  pointer-events: none;
+}

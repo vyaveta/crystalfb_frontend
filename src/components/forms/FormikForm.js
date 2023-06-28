@@ -15,7 +15,7 @@ const FormikForm = ({initialValues, validationSchemaObj, onSubmit: onSubmitFunct
       enableReinitialize
       initialValues={initialValues}
       validationSchema={validationSchemaObj}
-      onSubmit={values => console.log(values,'is the final values for the login')}
+      onSubmit={onSubmitFunction}
     >
       {(formik) => (
         <Form

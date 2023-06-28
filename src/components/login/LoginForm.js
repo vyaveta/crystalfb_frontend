@@ -1,7 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Form, Formik } from "formik";
 import styles from "../../pages/login/login.module.css";
-import LoginInput from "../inputs/loginInput";
 import { Link, useNavigate } from "react-router-dom";
 import FormikForm from "../forms/FormikForm";
 import { loginValidation } from "../../utils/componentHelpers/validations";
@@ -21,7 +19,6 @@ const LoginForm = ({setShowRegister}) => {
 
   const [login, setLogin] = useState(loginInfo);
 
-  const { email, password } = login;
 
   const handleLoginChange = useCallback((e) => {
     console.log(' handle login change function called!')
@@ -53,7 +50,6 @@ const LoginForm = ({setShowRegister}) => {
         bottom
       />
       <button 
-      // onClick={}
       type="submit" className="blue_btn">
         Login
       </button>
