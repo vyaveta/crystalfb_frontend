@@ -6,6 +6,7 @@ const initialState = {
   isLoggedIn: false,
   errorMessage: "",
   successMessage: "",
+  errors: {},
 };
 
 export const authSlice = createSlice({
@@ -18,12 +19,15 @@ export const authSlice = createSlice({
     setIsLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
     },
-    setIsLoading: (state, action) => {
+    setIsloading: (state, action) => {
       state.isLoading = action.payload;
     },
+    setError: (state,action) => {
+      state.errors[action.payload.key] = action.payload.value
+    }
   },
 });
 
-export const { setCredentials, setIsLoggedIn, setIsloading } =
+export const { setCredentials, setIsLoggedIn, setIsloading, setError } =
   authSlice.actions;
 export default authSlice.reducer;

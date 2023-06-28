@@ -3,7 +3,7 @@ import styles from './input.module.css'
 import {useMediaQuery} from 'react-responsive'
 import InputError from '../smallComponents/InputError'
 
-const Input = ({ bottom, onChange : onChangeFunction, right, ...props }) => {
+const Input = ({ bottom, onChange : onChangeFunction, value, right, ...props }) => {
 
   const desktopView = useMediaQuery({
     query: "(min-width: 1000px)",
@@ -11,6 +11,9 @@ const Input = ({ bottom, onChange : onChangeFunction, right, ...props }) => {
 
   const [field, meta] = useField(props)
   field.onChange = onChangeFunction
+  console.log(props)
+
+  // console.log(meta,'is the meta')
 
   return (
     <div className={`${styles.input_wrap}`}>
@@ -21,7 +24,7 @@ const Input = ({ bottom, onChange : onChangeFunction, right, ...props }) => {
       }
       <input
         className={meta.touched && meta.error ? "input_error_border" : ''}
-        type={field.type} name={field.name} {...props} {...field} />
+        type={field.type} name={field.name}  {...field}  {...props} />
       {
         meta.touched && meta.error && <i className='error_icon' style={{top: `${!bottom && !desktopView ? '65%' : '15px'}`}} ></i>
       }

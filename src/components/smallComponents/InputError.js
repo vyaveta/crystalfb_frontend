@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import styles from './inputError.module.css'
 import { ErrorMessage } from 'formik'
 
-const InputError = ({right, bottom, name}) => {
+const InputError = ({right, bottom, name, text}) => {
 
     const desktopView = useMediaQuery({
         query: "(min-width: 1000px)",
@@ -14,7 +14,10 @@ const InputError = ({right, bottom, name}) => {
   return (
    <>
           <div className={desktopView && right ? `${styles.input_error} ${styles.input_error_desktop_right}`: desktopView ? `${styles.input_error} ${styles.input_error_desktop}` : styles.input_error}>
-            <ErrorMessage name={name} />
+            {
+              name ? <ErrorMessage name={name} />
+              : text
+            }
             <div className={desktopView && right ? styles.error_arrow_right : desktopView ? styles.error_arrow_left : bottom ? styles.error_arrow_bottom : styles.error_arrow_top}></div>
           </div>
    </>
