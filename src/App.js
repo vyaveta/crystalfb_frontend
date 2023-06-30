@@ -1,9 +1,9 @@
 import { Routes,Route } from "react-router-dom"
 import Login from "./pages/login";
 import Profile from "./pages/profile";
-import Home from "./pages/home";
 import { useSelector } from "react-redux";
 import { HashLoaderComponent } from "./components/smallComponents/loaders/loaders";
+import Home from "./pages/home/Home";
 
 function App() {
   const isLoading = useSelector((state) => state.auth.isLoading)

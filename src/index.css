@@ -72,3 +72,13 @@ a {
 .no_interactions{
   pointer-events: none;
 }
+
+/* Hovers  */
+
+.hover1:hover{
+  background: var(--bg-secondary);
+}
+
+.hover2:hover{
+  background: var(--bg-third);
+}
