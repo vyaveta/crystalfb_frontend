@@ -7,6 +7,7 @@ export const stopEventPropagation = event => {
 export const useClickOutside = (ref,fun) => {
     useEffect(() => {
         const listener = (e) => {
+            console.log("[CLICK_OUTSIDE-REF]",ref.current.contains(e.target))
             if(!ref.current || ref.current.contains(e.target)) return
             fun()
         }

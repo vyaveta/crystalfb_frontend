@@ -1,6 +1,7 @@
 import { toast } from "react-hot-toast";
 
 export const handleApiError = (err) => {
+  console.log("from handle api error")
     // the response object contain a field named errors if there is any errors
     try {
       let message = "";
@@ -35,7 +36,6 @@ export const handleApiError = (err) => {
     return message;
   };
 
-  export const showToastMessage = (type,message) => {
-    toast[type](message)
-  }
+  export const showToastMessage = (type,message) => toast[type](message)
+
   

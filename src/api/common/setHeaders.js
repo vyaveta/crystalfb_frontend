@@ -7,7 +7,7 @@ export const setHeaders = (contentType, token, jwtToken) => {
     "X-Timezone-Offset": new Date().getTimezoneOffset(),
     "Timezone-Central": Intl.DateTimeFormat().resolvedOptions().timeZone,
   };
-  if (jwtToken) headers.Authorization = `Bearer ${jwtToken}`
   if (token) headers.Authorization = `Bearer ${userData.jwtToken}`
+  if (jwtToken) headers.Authorization = `Bearer ${jwtToken}`
   return headers
 };

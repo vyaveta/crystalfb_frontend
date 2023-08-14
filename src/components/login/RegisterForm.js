@@ -58,7 +58,7 @@ const RegisterForm = ({ setShowRegister }) => {
       let pickedDate = new Date(bYear, bMonth - 1, bDay);
       let age = calculateAge(pickedDate);
       if (age < 14 || !age){
-        setErrors({
+        return setErrors({
           ...errors,
           signUpDate:
             "You are not allowed to create account since you are under 14 years of age.",

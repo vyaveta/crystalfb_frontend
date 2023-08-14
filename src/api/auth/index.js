@@ -1,5 +1,6 @@
+import { userLoginRoute, userRegisterRoute } from "../../routes/userRoutes"
 import { setCredentials, setIsLoggedIn, setIsloading } from "../../redux/features/auth"
-import { userLoginRoute, userRegisterRoute } from "../../utils/routes/userRoutes"
+// import { userLoginRoute, userRegisterRoute } from "../../utils/routes/userRoutes"
 import { asyncFunction } from "../common/asyncFunction"
 import { handleApiError, showToastMessage } from "../common/commonFunctions"
 import { createConfig } from "../common/config"
