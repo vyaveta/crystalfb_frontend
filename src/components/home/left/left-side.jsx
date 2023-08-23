@@ -43,7 +43,7 @@ const LeftSide = ({ user }) => {
           <div className="small_circle rotate180">
             <ArrowDown1 />
           </div>
-          <span>Show less</span>
+          <span className={styles.col} >Show less</span>
         </div>
       }
       <div className='splitter' />
