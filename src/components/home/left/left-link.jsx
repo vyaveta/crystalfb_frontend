@@ -11,7 +11,7 @@ const LeftLink = ({img, text, notification}) => {
                 <div className={styles.col_2}>{notification}</div>
             </div>
         ) : (
-            <span>{text}</span>
+            <span className={styles.col} >{text}</span>
         )}
     </div>
   )

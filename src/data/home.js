@@ -8,10 +8,14 @@ export const left = [
       img: "memories",
     },
     {
-      text: "Groups",
-      img: "groups",
-      notification: "5 new",
+      text: "Messenger",
+      img: "messenger",
     },
+    // {
+    //   text: "Groups",
+    //   img: "groups",
+    //   notification: "5 new",
+    // },
     {
       text: "Marketplace",
       img: "marketplace",

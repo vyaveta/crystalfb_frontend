@@ -1,7 +1,7 @@
 import { ErrorMessage, useField } from 'formik'
 import styles from './input.module.css'
 import {useMediaQuery} from 'react-responsive'
-import InputError from '../smallComponents/InputError'
+import InputError from '../ui/InputError'
 
 const Input = ({ bottom, onChange : onChangeFunction, value, right, ...props }) => {
 

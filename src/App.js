@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
 import { useSelector } from "react-redux";
-import { HashLoaderComponent } from "./components/smallComponents/loaders/loaders";
 import Home from "./pages/home/Home";
 import LoggedInRoutes from "./routes/logged-in-routes";
 import NotLoggedInRoute from "./routes/not-logged-in-routes";
+import { HashLoaderComponent } from "./components/ui/loaders/loaders";
 
 function App() {
   const isLoading = useSelector((state) => state.auth.isLoading);

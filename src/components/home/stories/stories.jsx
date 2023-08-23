@@ -5,7 +5,36 @@ import Story from './components/story'
 
 const Stories = () => {
 
+    // const max1175px = useMediaQuery({
+    //     query: "(max-width: 1175px)",
+    // })
+
     const stories = [
+        {
+            profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
+            profile_name: "Elon Musk",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSRiVMbyaQJuvy-4q5Ly7tZuMUTM9ITGy7w&usqp=CAU"
+        },
+        {
+            profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
+            profile_name: "Elon Musk",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSRiVMbyaQJuvy-4q5Ly7tZuMUTM9ITGy7w&usqp=CAU"
+        },
+        {
+            profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
+            profile_name: "Elon Musk",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSRiVMbyaQJuvy-4q5Ly7tZuMUTM9ITGy7w&usqp=CAU"
+        },
+        {
+            profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
+            profile_name: "Elon Musk",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSRiVMbyaQJuvy-4q5Ly7tZuMUTM9ITGy7w&usqp=CAU"
+        },
+        {
+            profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
+            profile_name: "Elon Musk",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSRiVMbyaQJuvy-4q5Ly7tZuMUTM9ITGy7w&usqp=CAU"
+        },
         {
             profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yd1wjsuO7XokVEqthLWPG1BPUJ1F8I58KQ&usqp=CAU",
             profile_name: "Elon Musk",
@@ -54,7 +83,7 @@ const Stories = () => {
     const [lastStory, setLastStory] = useState(4)
     const [startStory,setStartStory] = useState(0)
 
-    const scrollToStory = (index,prev) => {
+    const scrollToStory = (index,prev) => { 
         try {
             if(prev) {
                 setStartStory(index)

@@ -3,14 +3,14 @@ import { useCallback, useState } from "react";
 import { registerValidation } from "../../utils/componentHelpers/validations";
 import Input from "../inputs/Input";
 import { calculateAge } from "../../utils/componentHelpers/moment";
-import InputError from "../smallComponents/InputError";
 import { useMediaQuery } from "react-responsive";
 import { useSelector, useDispatch } from "react-redux";
-import { HashLoaderComponent } from "../smallComponents/loaders/loaders";
 import { registerFunction } from "../../api/auth";
 import { useNavigate } from "react-router-dom";
 import { setIsloading } from "../../redux/features/auth";
 import FormikForm from "../forms/FormikForm";
+import InputError from "../ui/InputError";
+import { HashLoaderComponent } from "../ui/loaders/loaders";
 
 const userInfo = {
   first_name: "",
