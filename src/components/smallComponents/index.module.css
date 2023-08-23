@@ -1,0 +1,15 @@
+.primary{
+    background: var(--bg-secondary);
+    padding: 15px 15px;
+    width: 100%;
+    color: var(--dark-color-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+
+.primary:hover{
+    background: var(--bg-third);
+}

@@ -108,3 +108,22 @@ a {
   background: var(--bg-third);
   cursor: pointer;
 }
+
+.rotate180{
+  transform: rotate(180deg);
+}
+
+.splitter{
+  margin-top: 5px;
+  width: 100%;
+  height: 1px;
+  background: var(--dark-color-secondary);
+}
+
+.text_blue{
+  color: var(--blue-color);
+}
+
+.none{
+  display: none;
+}

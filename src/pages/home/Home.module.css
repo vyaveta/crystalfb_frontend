@@ -1,3 +1,9 @@
+.home{
+ min-height: 100vh;
+ background: var(--bg-secondary); 
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+}
 
 .card{
     height: 500px;
@@ -11,6 +17,10 @@
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    margin-top: 8vh;
+    /* margin-top: 8vh; */
 }
 
+.home_middle{
+    margin-top: 75px;
+    margin-left: 31vw;
+}
