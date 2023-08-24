@@ -9,5 +9,6 @@ export const setHeaders = (contentType, token, jwtToken) => {
   };
   if (token) headers.Authorization = `Bearer ${userData.jwtToken}`
   if (jwtToken) headers.Authorization = `Bearer ${jwtToken}`
+  if (userData?.token) headers.Authorization = `Bearer ${userData.token}`
   return headers
 };
