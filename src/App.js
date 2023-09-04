@@ -6,24 +6,27 @@ import Home from "./pages/home/Home";
 import LoggedInRoutes from "./routes/logged-in-routes";
 import NotLoggedInRoute from "./routes/not-logged-in-routes";
 import { HashLoaderComponent } from "./components/ui/loaders/loaders";
+import Reset from "./pages/reset/reset";
 
 function App() {
   const isLoading = useSelector((state) => state.auth.isLoading);
 
   return (
     <div className={isLoading ? "no_interactions" : ""}>
-      <HashLoaderComponent size={30} color={"#1876f2"} loading={isLoading} />
+      <HashLoaderComponent size={40} color={"#1876f2"} loading={isLoading} /> 
       <Routes>
 
         <Route element={<LoggedInRoutes />} >
           <Route path="/profile" element={<Profile />} exact />
           <Route path="/" element={<Home />} exact />
-          <Route path="/activate/:id" element={<Home activate={true} />} exact />
+          <Route path="/activate/:token" element={<Home activate={true} />} exact />
         </Route>
         
         <Route element={<NotLoggedInRoute />} >
         <Route path="/login" element={<Login />} exact />
         </Route>
+
+        <Route path="/reset" element={<Reset />} />
 
       </Routes>
     </div>

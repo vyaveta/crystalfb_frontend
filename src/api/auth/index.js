@@ -1,4 +1,4 @@
-import { userLoginRoute, userRegisterRoute } from "../../routes/userRoutes"
+import { userLoginRoute, userRegisterRoute, userSendVerificationRoute } from "../../routes/userRoutes"
 import { setCredentials, setIsLoggedIn, setIsloading } from "../../redux/features/auth"
 // import { userLoginRoute, userRegisterRoute } from "../../utils/routes/userRoutes"
 import { asyncFunction } from "../common/asyncFunction"
@@ -43,6 +43,27 @@ export const loginFunction = async (data, dispatch, navigate) => {
         navigate('/')
     }catch(error) {
         handleApiError(error)
+    }finally{
+        dispatch(setIsloading(false))
+    }
+}
+
+export const sendVerificationLink = async (dispatch, setAllowVerification) => {
+    try{
+        dispatch(setIsloading(true))
+
+        const config = createConfig(
+            "post",
+            userSendVerificationRoute,
+            setHeaders("application/json"),
+            {}
+        )
+        const { message } = await asyncFunction(config)
+        showToastMessage("success", message)
+        setAllowVerification(false)
+    }catch(error){
+        handleApiError(error)
+        setAllowVerification(true)
     }finally{
         dispatch(setIsloading(false))
     }

@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from "../user-menu.module.css"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { logout } from '../../../../redux/actions/auth'
 
 
 const Menu = ({setVisible}) => {
 
     const user = useSelector((state) => state.auth.userData)
+    const dispatch = useDispatch()
 
     return (
         <div>
@@ -64,7 +66,7 @@ const Menu = ({setVisible}) => {
                 </div>
             </div>
 
-            <div className={`${styles.menu_item} hover3`} >
+            <div className={`${styles.menu_item} hover3`} onClick={() => logout(dispatch)} >
                 <div className="small_circle">
                     <i className="logout_filled_icon"></i>
                 </div>

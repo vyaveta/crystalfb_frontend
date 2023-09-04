@@ -6,9 +6,9 @@ const FormikForm = ({initialValues, validationSchemaObj, onSubmit: onSubmitFunct
 
   if(!initialValues) console.error('no initial values detected!!!')
 
-  useEffect(() => {
-    console.log(initialValues,'is the initial values that we got')
-  },[initialValues])
+  // useEffect(() => {
+  //   console.log(initialValues,'is the initial values that we got')
+  // },[initialValues])
 
   return (
     <Formik

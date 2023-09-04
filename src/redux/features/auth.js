@@ -24,10 +24,13 @@ export const authSlice = createSlice({
     },
     setError: (state,action) => {
       state.errors[action.payload.key] = action.payload.value
+    },
+    setVerified: (state, action) => {
+      state.userData.verified = action.payload
     }
   },
 });
 
-export const { setCredentials, setIsLoggedIn, setIsloading, setError } =
+export const { setCredentials, setIsLoggedIn, setIsloading, setError, setVerified } =
   authSlice.actions;
 export default authSlice.reducer;

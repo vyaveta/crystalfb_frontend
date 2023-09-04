@@ -64,6 +64,23 @@ a {
   gap: 6px;
   cursor: pointer;
 }
+/* Buttons */
+.gray_btn{
+  background: var(--bg-secondary);
+  border: none;
+  outline: none;
+  padding: 8.5px 12px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
 
 .input_error_border{
   border-color: #b94a48 !important;

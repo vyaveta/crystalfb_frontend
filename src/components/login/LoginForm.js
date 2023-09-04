@@ -74,7 +74,7 @@ const LoginForm = ({setShowRegister}) => {
             body={LoginBody}
             onSubmit={() => loginFunction(login, dispatch, navigate)}
           />
-          <Link to="/forgotpassword" className={`${styles.forgot_password}`}>
+          <Link to="/reset" className={`${styles.forgot_password}`}>
             Forgot password?
           </Link>
           <div className={`${styles.sign_splitter}`}></div>

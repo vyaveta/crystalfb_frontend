@@ -34,3 +34,15 @@ export const registerValidation = Yup.object({
   password: Yup.string().required(messages.passReq).min(6,messages.passLength).max(36,messages.passLength)
 });
 
+export const emailValidation = Yup.object({
+  email: Yup.string().email(messages.emailValid).required("Enter your email id!"),
+})
+
+export const passwordValidation = Yup.object({
+  password: Yup.string().required(messages.passReq).min(6,messages.passLength).max(36,messages.passLength),
+  confirmPassword: Yup.string().required(messages.passReq).oneOf([Yup.ref("password")], "passwords must match!")
+})
+
+export const codeValidation = Yup.object({
+  code: Yup.string().required("Enter the code!")
+})

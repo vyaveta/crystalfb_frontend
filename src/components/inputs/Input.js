@@ -13,6 +13,7 @@ const Input = ({ bottom, onChange : onChangeFunction, value, right, ...props }) 
   field.onChange = onChangeFunction
   console.log(field,'is the field')
   // console.log(meta,'is the meta')
+  console.log("value:", value)
 
   return (
     <div className={`${styles.input_wrap}`}>
