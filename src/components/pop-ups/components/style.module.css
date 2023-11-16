@@ -1,0 +1,26 @@
+.add_to_your_post{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--bg-forth);
+}
+
+.add_to_text{
+    width: 50%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post_header_right{
+    /* width: 35px;
+    height: 35px; */
+    display: grid;
+    place-items: center;
+    
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+}
