@@ -13,19 +13,24 @@ function App() {
 
   return (
     <div className={isLoading ? "no_interactions" : ""}>
-      <HashLoaderComponent size={40} color={"#1876f2"} loading={isLoading} /> 
-      <Routes>
 
-        <Route element={<LoggedInRoutes />} >
+      <HashLoaderComponent size={40} color={"#1876f2"} loading={isLoading} />
+
+      <Routes>
+        
+        {/* LoggedInRoutes */}
+        <Route element={<LoggedInRoutes />}>
           <Route path="/profile" element={<Profile />} exact />
           <Route path="/" element={<Home />} exact />
-          <Route path="/activate/:token" element={<Home activate={true} />} exact />
+          <Route path="/activate/:token" element={<Home activate={true} />} exact/>
         </Route>
         
-        <Route element={<NotLoggedInRoute />} >
-        <Route path="/login" element={<Login />} exact />
+        {/* NotLoggedInRoute */}
+        <Route element={<NotLoggedInRoute />}>
+          <Route path="/login" element={<Login />} exact />
         </Route>
 
+        {/* Routes who doesnt care about wheather the user is loggedin or not */}
         <Route path="/reset" element={<Reset />} />
 
       </Routes>

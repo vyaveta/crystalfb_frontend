@@ -14,6 +14,7 @@ import { setHeaders } from '../../api/common/setHeaders'
 import { asyncFunction } from '../../api/common/asyncFunction'
 import { setVerified } from '../../redux/features/auth'
 import SendVerification from './components/send-verification'
+import CreatePostPopUp from '../../components/pop-ups/create-post'
 
 const Home = ({activate}) => {
 
@@ -77,8 +78,9 @@ const Home = ({activate}) => {
 
       <div className={styles.home_middle} >
         <Stories />
-        { !user?.verified && allowVerification && <SendVerification dispatch={dispatch} setAllowVerification={setAllowVerification} /> }
+        {/* { !user?.verified && allowVerification && <SendVerification dispatch={dispatch} setAllowVerification={setAllowVerification} /> } */}
         <CreatePost user={user} />
+         <CreatePostPopUp user={user} /> 
       </div>
     </div>
   )

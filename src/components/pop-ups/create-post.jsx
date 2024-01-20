@@ -13,6 +13,7 @@ const CreatePostPopUp = ({ user }) => {
     const [text, setText] = useState("")
     const [showPreview, setShowPreview] = useState(true)
     const [showPicker, setShowPicker] = useState(false)
+    const [images, setImages] = useState({})
     const textRef = useRef(null)
 
     
@@ -42,7 +43,7 @@ const CreatePostPopUp = ({ user }) => {
                 {!showPreview ?
                     <EmojiWrapper style={style} setText={setText} text={text} user={user} />
                     :
-                    <ImagePreview />
+                    <ImagePreview style={style} setText={setText} text={text} user={user} images={images} setImages={setImages} />
                 }
                 <AddToYourPost />
                 <Button text={'Create'} name={"primary"} />
