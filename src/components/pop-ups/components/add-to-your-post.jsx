@@ -2,13 +2,13 @@ import React from 'react'
 import style from "./style.module.css"
 import { Dots, Feeling, Photo } from '../../../svg'
 
-const AddToYourPost = () => {
+const AddToYourPost = ({setShowPreview}) => {
     return (
         <div className={style.add_to_your_post} >
             <div className={style.add_to_text} >
                 Add to your post
             </div>
-            <div className={`${style.post_header_right} hover1`} >
+            <div className={`${style.post_header_right} hover1`} onClick={() => setShowPreview(true)} >
                 <Photo color={"#45bd62"} />
             </div>
             <div className={`${style.post_header_right} hover1`} >

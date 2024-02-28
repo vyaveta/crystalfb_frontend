@@ -9,7 +9,6 @@ const LeftSide = ({ user }) => {
 
   const [seeMore, setSeeMore] = useState(false)
 
-  console.log(user, 'is the user')
 
   return (
     <div className={`${styles.left_home} scrollbar`} >

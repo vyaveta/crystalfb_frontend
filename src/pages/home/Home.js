@@ -80,7 +80,7 @@ const Home = ({activate}) => {
         <Stories />
         {/* { !user?.verified && allowVerification && <SendVerification dispatch={dispatch} setAllowVerification={setAllowVerification} /> } */}
         <CreatePost user={user} />
-         <CreatePostPopUp user={user} /> 
+         {/* <CreatePostPopUp user={user} />  */}
       </div>
     </div>
   )

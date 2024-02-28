@@ -14,10 +14,7 @@ const messages = {
 };
 
 export const loginValidation = Yup.object({
-  email: Yup.string()
-    .required(messages.emailRequired)
-    .email(messages.emailValid)
-    .max(50, messages.tooLong),
+  email: Yup.string().required(messages.emailRequired).email(messages.emailValid).max(50, messages.tooLong),
   password: Yup.string().required(messages.passReq),
 });
 
@@ -29,7 +26,7 @@ const nameValidation = () => Yup.string()
 
 export const registerValidation = Yup.object({
   first_name: nameValidation(),
-    last_name: nameValidation(),
+  last_name: nameValidation(),
   email: Yup.string().email(messages.emailValid).required(messages.emailReq),
   password: Yup.string().required(messages.passReq).min(6,messages.passLength).max(36,messages.passLength)
 });

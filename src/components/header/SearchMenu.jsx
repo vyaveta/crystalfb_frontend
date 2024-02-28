@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './Header.module.css'
 import { Return, Search } from '../../svg'
-import { useClickOutside } from '../../utils/componentHelpers/common'
+import { useClickOutside } from '../../hooks/click-outside'
 
 const color = '#65676b'
 

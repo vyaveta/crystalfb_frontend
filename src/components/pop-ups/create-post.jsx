@@ -13,10 +13,10 @@ const CreatePostPopUp = ({ user }) => {
     const [text, setText] = useState("")
     const [showPreview, setShowPreview] = useState(true)
     const [showPicker, setShowPicker] = useState(false)
-    const [images, setImages] = useState({})
+    const [images, setImages] = useState([])
     const textRef = useRef(null)
 
-    
+    console.log(images)
 
     return (
         <div className='blur' >
@@ -43,10 +43,10 @@ const CreatePostPopUp = ({ user }) => {
                 {!showPreview ?
                     <EmojiWrapper style={style} setText={setText} text={text} user={user} />
                     :
-                    <ImagePreview style={style} setText={setText} text={text} user={user} images={images} setImages={setImages} />
+                    <ImagePreview style={style} setText={setText} text={text} user={user} images={images} setImages={setImages} setShowPreview={setShowPreview} />
                 }
-                <AddToYourPost />
-                <Button text={'Create'} name={"primary"} />
+                <AddToYourPost setShowPreview={setShowPreview} />
+                <Button text={'Post'} name={"primary"} />
             </div>
         </div>
     )

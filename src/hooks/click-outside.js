@@ -5,11 +5,11 @@ export const useClickOutside = (ref, fun) => {
     useEffect(() => {
       const listener = (e) => {
         try {
-          console.log("[CLICK_OUTSIDE-REF]", ref.current.contains(e.target));
+          // console.log("[CLICK_OUTSIDE-REF]", ref.current.contains(e.target));
           if (!ref?.current || ref?.current.contains(e.target)) return;
           fun();
         } catch (_) {
-          // not gonna do anything
+          // not gonna do anything :)
         }
       };
       document.addEventListener("mousedown", listener);

@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 import SearchMenu from "./SearchMenu";
 import { useRef, useState } from "react";
 import AllMenu from "./all-menu/all-menu";
-import { useClickOutside } from "../../utils/componentHelpers/common";
 import UserMenu from "./user-menu/user-menu";
 import { useMediaQuery } from "react-responsive";
+import { useClickOutside } from "../../hooks/click-outside";
 
 const color = '#65676b'
 
